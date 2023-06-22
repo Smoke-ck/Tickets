@@ -23,7 +23,7 @@ class Api::TicketsController < ApplicationController
 
   def ticket_params
     sanitized_params.permit(:request_number, :sequence_number, :request_type, :request_action, date_times: {},
-                                    service_area: {}).merge(well_known_text: well_known_text)
+                            service_area: {}).merge(well_known_text: well_known_text)
   end
 
   def excavator_params
