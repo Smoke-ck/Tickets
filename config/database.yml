@@ -82,6 +82,5 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: excavator_ticket_app_production
+  database: excavator_ticket_app_production_buij
   username: excavator_ticket_app
-  password: <%= ENV["EXCAVATOR_TICKET_APP_DATABASE_PASSWORD"] %>
