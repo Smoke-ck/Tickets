@@ -27,7 +27,7 @@ class Api::TicketsController < ApplicationController
   end
 
   def excavator_params
-    sanitized_params.require(:excavator).permit(:company_name, :address)
+    sanitized_params.require(:excavator).permit(:company_name, :address, :crew_onsite)
   end
 
   def well_known_text
