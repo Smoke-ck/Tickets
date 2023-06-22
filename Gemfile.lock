@@ -90,6 +90,10 @@ GEM
       reline (>= 0.3.1)
     decent_exposure (3.0.4)
       activesupport (>= 4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -112,6 +116,7 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mapkick-rb (0.1.4)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -179,6 +184,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    slim (5.1.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -188,7 +196,9 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    temple (0.10.2)
     thor (1.2.2)
+    tilt (2.2.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -221,14 +231,17 @@ DEPENDENCIES
   capybara
   debug
   decent_exposure
+  dotenv-rails
   importmap-rails
   jbuilder
+  mapkick-rb
   pg (~> 1.1)
   pry
   puma (~> 5.0)
   rails (~> 7.0.3)
   redis (~> 4.0)
   selenium-webdriver
+  slim
   sprockets-rails
   stimulus-rails
   turbo-rails
