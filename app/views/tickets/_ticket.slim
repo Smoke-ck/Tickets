@@ -1,0 +1,12 @@
+= link_to ticket, class: 'ticket_link' do
+  p ID: #{ticket.id}
+  p Request Number: #{ticket.request_number}
+  p Sequence Number: #{ticket.sequence_number}
+  p Request Type: #{ticket.request_type}
+  p Request Action: #{ticket.request_action}
+  p Response Due Date Time: #{ticket.date_times[:response_due_date_time]}
+  p Primary Service Area Code: #{ticket.service_area[:primary_service_area_code]}
+  p Additional Service Area Code: #{ticket.service_area[:additonal_service_area_code]}
+  p Excavator Company Name: #{ticket.excavator.company_name}
+  p Excavator Address: #{ticket.excavator.address}
+  p Excavator Crew Onsite: #{ticket.excavator.crew_on_site}
