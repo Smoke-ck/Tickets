@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+  text-align: center;
+}
+
+.tickets {
+  padding: 30px 50px;
+ }
+
+.ticket-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+  grid-column-gap: 45px;
+  padding: 30px;
+  row-gap: 30px;
+}
+
+.ticket_link {
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.ticket_link:hover {
+  background-color: antiquewhite;
+}
+
+.ticket {
+  padding: 30px;
+}
