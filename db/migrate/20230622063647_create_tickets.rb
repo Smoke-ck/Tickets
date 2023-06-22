@@ -7,6 +7,7 @@ class CreateTickets < ActiveRecord::Migration[7.0]
       t.string :request_action
       t.jsonb :date_times
       t.jsonb :service_area
+      t.string :well_known_text
 
       t.timestamps
     end
