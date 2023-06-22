@@ -10,17 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_22_094306) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_22_093944) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "excavation_infos", force: :cascade do |t|
-    t.jsonb "digsite_info"
-    t.bigint "excavator_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["excavator_id"], name: "index_excavation_infos_on_excavator_id"
-  end
 
   create_table "excavators", force: :cascade do |t|
     t.string "company_name"
@@ -39,6 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_22_094306) do
     t.string "request_action"
     t.jsonb "date_times"
     t.jsonb "service_area"
+    t.string "well_known_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
