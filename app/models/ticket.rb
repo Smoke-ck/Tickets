@@ -1,6 +1,8 @@
 class Ticket < ApplicationRecord
   has_one :excavator, dependent: :destroy
 
+  validates_numericality_of :sequence_number, presence: true
+
   delegate :company_name, :address, :crew_onsite, to: :excavator, allow_nil: true, prefix: true
 
   def date_time

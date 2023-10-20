@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  messages:
+    destroy: '%{record} has been successfully deleted'
+    update: '%{record} has been successfully updated'
