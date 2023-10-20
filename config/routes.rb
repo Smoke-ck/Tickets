@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :tickets, only: %i[create]
   end
 
-  resources :tickets, only: %i[index show]
+  resources :tickets, except: %i[create]
 end

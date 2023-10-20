@@ -1,2 +1,6 @@
-= link_to ticket, class: 'ticket_link' do
-  = render partial: 'ticket_details', locals: { ticket: ticket }
+.ticket_card
+  = link_to ticket, class: 'ticket_link' do
+    = render partial: 'ticket_details', locals: { ticket: ticket }
+
+  = link_to "Edit Ticket", edit_ticket_path(ticket)
+  = button_to  "Delete Ticket", ticket_path(ticket), method: :delete, data: {'turbo': 'false'}

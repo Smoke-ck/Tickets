@@ -1,0 +1,9 @@
+h1 = ticket.request_number
+= link_to "Back", tickets_path
+
+= simple_form_for ticket do |f|
+  = f.input :request_number
+  = f.input :sequence_number
+  = f.input :request_type
+  = f.input :request_action
+  = f.submit "Save"

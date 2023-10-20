@@ -31,13 +31,16 @@ h1 {
 
 .ticket_link {
   color: black;
-  border: 1px solid black;
-  border-radius: 2px;
-  padding: 10px;
   text-decoration: none;
 }
 
-.ticket_link:hover {
+.ticket_card {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.ticket_card:hover {
   background-color: antiquewhite;
 }
 
