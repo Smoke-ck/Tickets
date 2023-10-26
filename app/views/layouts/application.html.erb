@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -14,6 +14,7 @@
     <div id="flash">
       <%= render "shared/flash" %>
     </div>
+    <%= turbo_frame_tag :modal%>
     <%= yield %>
   </body>
 </html>

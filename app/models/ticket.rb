@@ -2,6 +2,7 @@ class Ticket < ApplicationRecord
   has_one :excavator, dependent: :destroy
 
   validates_numericality_of :sequence_number, presence: true
+  validates :request_type, presence: true
 
   delegate :company_name, :address, :crew_onsite, to: :excavator, allow_nil: true, prefix: true
 
