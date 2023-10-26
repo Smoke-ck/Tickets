@@ -1,0 +1,25 @@
+.tickets {
+  padding: 30px 50px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+    grid-column-gap: 45px;
+    padding: 30px;
+    row-gap: 30px;
+  }
+ }
+
+.ticket {
+  border: 1px solid black;
+  border-radius: 2px;
+  color: black;
+  padding: 10px;
+
+  &:hover { background-color: antiquewhite; }
+
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
+}
