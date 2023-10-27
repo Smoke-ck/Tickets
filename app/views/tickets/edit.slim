@@ -1,7 +1,6 @@
 = turbo_frame_tag :modal do
-  . data-controller="turbomodal"
+  .modal__content data-controller="turbomodal"
     h1 = ticket.request_number
-    = link_to "Back", tickets_path
 
     = simple_form_for ticket, data: { action: "turbo:submit-end->turbomodal#submitEnd" } do |f|
       = f.input :request_number
@@ -9,3 +8,4 @@
       = f.input :request_type
       = f.input :request_action
       = f.submit "Save"
+      = button_tag "Close", data: { action: "turbomodal#hideModal" }, type: "button"
