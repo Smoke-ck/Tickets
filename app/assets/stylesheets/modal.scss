@@ -1,0 +1,22 @@
+.modal {
+  backdrop-filter: blur(10px);
+  position: absolute;
+
+  &__content {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s ease;
+    width: 600px;
+    z-index: 2;
+  }
+
+  &--blur {
+    background: rgba(54, 25, 25, .5);
+    height: 100%;
+    width: 100%;
+  }
+}

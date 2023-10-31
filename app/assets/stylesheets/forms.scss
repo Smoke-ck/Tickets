@@ -1,0 +1,44 @@
+.simple_form {
+  padding: 10px;
+
+  .input {
+    margin: 10px;
+  }
+
+  label {
+    margin-right: 5px;
+    abbr {
+      display: none;
+    }
+  }
+
+  .form_group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.btn {
+  background-color: gray;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 2px;
+  padding: 13px 30px;
+  transition: 0.3s;
+  text-align: center;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: 0 10px 15px 0 rgba(120, 128, 135, 0.59);
+  }
+}
+
+.center_buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
