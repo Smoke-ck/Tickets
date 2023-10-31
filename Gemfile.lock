@@ -90,11 +90,19 @@ GEM
       reline (>= 0.3.1)
     decent_exposure (3.0.4)
       activesupport (>= 4.0)
+    diff-lcs (1.5.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (3.2.1)
+      i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -180,6 +188,25 @@ GEM
     reline (0.3.5)
       io-console (~> 0.5)
     rexml (3.2.5)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.6)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-rails (6.0.3)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.12)
+      rspec-expectations (~> 3.12)
+      rspec-mocks (~> 3.12)
+      rspec-support (~> 3.12)
+    rspec-retry (0.6.2)
+      rspec-core (> 3.3)
+    rspec-support (3.12.1)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -238,6 +265,8 @@ DEPENDENCIES
   debug
   decent_exposure
   dotenv-rails
+  factory_bot_rails
+  faker
   importmap-rails
   jbuilder
   mapkick-rb
@@ -246,6 +275,8 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3)
   redis (~> 4.0)
+  rspec-rails
+  rspec-retry
   sassc
   selenium-webdriver
   simple_form
