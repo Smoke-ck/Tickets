@@ -3,9 +3,10 @@
     h1 = ticket.request_number
 
     = simple_form_for ticket, data: { action: "turbo:submit-end->turbomodal#submitEnd" } do |f|
-      = f.input :request_number
-      = f.input :sequence_number
-      = f.input :request_type
-      = f.input :request_action
-      = f.submit "Save"
-      = button_tag "Close", data: { action: "turbomodal#hideModal" }, type: "button"
+      = f.input :request_number, wrapper_html: { class: 'form_group' }
+      = f.input :sequence_number, wrapper_html: { class: 'form_group' }
+      = f.input :request_type, wrapper_html: { class: 'form_group' }
+      = f.input :request_action, wrapper_html: { class: 'form_group' }
+      .center_buttons
+        = f.submit "Save", class: "btn"
+        = button_tag "Close", data: { action: "turbomodal#hideModal" }, type: "button", class: "btn"
