@@ -7,6 +7,13 @@
       = f.input :sequence_number, wrapper_html: { class: 'form_group' }
       = f.input :request_type, wrapper_html: { class: 'form_group' }
       = f.input :request_action, wrapper_html: { class: 'form_group' }
+
+      = f.simple_fields_for :excavator do |excavator|
+        = excavator.input :company_name, wrapper_html: { class: 'form_group' }
+        = excavator.input :address, wrapper_html: { class: 'form_group' }
+        = excavator.label 'Crew On Site'
+        = excavator.check_box :crew_onsite
+
       .center_buttons
-        = f.submit "Save", class: "btn"
+        = f.submit "Save", class: "btn", data: { turbo_confirm: "Are you sure?" }
         = button_tag "Close", data: { action: "turbomodal#hideModal" }, type: "button", class: "btn"
