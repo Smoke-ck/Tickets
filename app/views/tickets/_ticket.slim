@@ -1,7 +1,7 @@
 = turbo_frame_tag ticket do
   .ticket
-    = link_to ticket, class: 'ticket__link', data: {'turbo': 'false'} do
+    = link_to ticket, class: 'ticket__link', data: { 'turbo': 'false' } do
       = render partial: 'ticket_details', locals: { ticket: ticket }
 
-    = link_to "Edit Ticket", edit_ticket_path(ticket), data: {turbo_frame: 'modal'}
-    = button_to  "Delete Ticket", ticket_path(ticket), method: :delete, data: {'turbo': 'false'}
+    = link_to "Edit Ticket", edit_ticket_path(ticket), data: { turbo_frame: 'modal' }
+    = button_to  "Delete Ticket", ticket_path(ticket), method: :delete, data: { turbo_confirm: "Are you sure?" }
