@@ -3,15 +3,29 @@ class TicketsController < ApplicationController
 
   expose :tickets, -> { Ticket.includes(:excavator).order(:sort) }
   expose :ticket, -> { Ticket.find(params[:id]) }
-  expose :coordinates, -> { ticket.well_known_text.scan(/(-?\d+\.\d+)\s(-?\d+\.\d+)/) }
+  expose :coordinates, -> { ticket.well_known_text&.scan(/(-?\d+\.\d+)\s(-?\d+\.\d+)/) }
   expose :excavator, from: :ticket
 
   def update
-    ticket.update(ticket_params) ? notice_msg : error_msg
+    respond_to do |format|
+      if ticket.update(ticket_params)
+        format.turbo_stream { notice_msg }
+        format.html { redirect_to tickets_path }
+      else
+        error_msg
+      end
+    end
   end
 
   def destroy
-    ticket.destroy ? notice_msg : error_msg
+    respond_to do |format|
+      if ticket.delete
+        format.turbo_stream { notice_msg }
+        format.html { redirect_to tickets_path }
+      else
+        error_msg
+      end
+    end
   end
 
   private
