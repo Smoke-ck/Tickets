@@ -1,7 +1,7 @@
 class TicketsController < ApplicationController
   before_action :set_associations, only: %i[new edit]
 
-  expose :tickets, -> { Ticket.includes(:excavator).order(id: :desc) }
+  expose :tickets, -> { Ticket.includes(:excavator).order(:sort) }
   expose :ticket, -> { Ticket.find(params[:id]) }
   expose :coordinates, -> { ticket.well_known_text.scan(/(-?\d+\.\d+)\s(-?\d+\.\d+)/) }
   expose :excavator, from: :ticket
