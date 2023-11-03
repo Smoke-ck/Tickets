@@ -10,6 +10,9 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'rails_sortable'
 gem "redis", "~> 4.0"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 

@@ -1,4 +1,8 @@
 class Ticket < ApplicationRecord
+  include RailsSortable::Model
+
+  set_sortable :sort
+
   has_one :excavator, dependent: :destroy
 
   validates_numericality_of :sequence_number, presence: true
